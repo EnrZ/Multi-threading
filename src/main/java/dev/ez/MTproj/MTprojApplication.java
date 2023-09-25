@@ -19,14 +19,8 @@ public class MTprojApplication {
 	public static void main(String[] args) {
 
 		Executor executor = Executors.newSingleThreadExecutor();
-		executor.execute(() -> {try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-
-			e.printStackTrace();
-		} System.out.println("Hello World");});
-
-
+		RunnableObject runnable = new RunnableObject("mythread");
+		executor.execute(runnable);
 		SpringApplication.run(MTprojApplication.class, args);
 	}
 

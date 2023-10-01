@@ -1,5 +1,6 @@
-package dev.ez.MTproj;
+package dev.ez.MTproj.main;
 
+import dev.ez.MTproj.RunnableObject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -9,7 +10,6 @@ import java.util.concurrent.*;
 
 //first exclude because I was getting an error after changing java 20 to 18, second to disable automatic login page
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, SecurityAutoConfiguration.class })
-
 
 
 
